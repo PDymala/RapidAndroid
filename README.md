@@ -1,2 +1,6 @@
 # RapidAndroid
-A selection of small Android apps made in Processing.org language.
+
+A selection of tiny Android apps made in Processing.org language.
+
+https://processing.org/
+https://android.processing.org/
