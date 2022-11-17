@@ -26,6 +26,7 @@ void setup() {
   manager.registerListener(gyroListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
   textFont(createFont("SansSerif", displayDensity * 24));
   textAlign(CENTER, CENTER);
+
 }
 
 public SensorEventListener gyroListener = new SensorEventListener() {

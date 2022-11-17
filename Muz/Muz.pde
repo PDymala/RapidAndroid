@@ -1,4 +1,10 @@
-
+/**
+ 5 min app. 
+ @Tech Processing.org - Android
+ @Author P.Dymala
+ */
+ 
+//still searching for an idea for this one.
 float xoff = 0.0;
 
 void setup() {
