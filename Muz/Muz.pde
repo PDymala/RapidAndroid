@@ -1,32 +1,33 @@
 /**
- 5 min app. 
+ 5 min app. Click for a suspicious rhythm...
  @Tech Processing.org - Android
  @Author P.Dymala
  */
- 
-//still searching for an idea for this one.
-float xoff = 0.0;
+
+import java.util.ArrayList;
+
+int numberOfFreqs = 36;
+float rad = 200;
+ArrayList<Ova> ov = new ArrayList<Ova>();
 
 void setup() {
   fullScreen();
   background(0);
+  stroke(255);
+  noFill();
 }
 
-int numberOfFreqs = 36;
-float rad = 200;
 
 void draw() {
   background(0);
-  translate(width/2, height/2);
-  background(0);
-  stroke(255);
-  noFill();
-  xoff = xoff + .01;
-  beginShape();
-  for (float i = TWO_PI/numberOfFreqs; i < TWO_PI; i+= TWO_PI/numberOfFreqs) {
-     
-    float temp = noise(xoff) * rad;
-    vertex(temp * cos(i), temp * sin(i));
+
+  if (ov.size() > 0) {
+    for (Ova o : ov) {
+      o.draw();
+    }
   }
-  endShape(CLOSE);
+}
+void mousePressed() {
+
+  ov.add(new Ova(mouseX, mouseY));
 }
