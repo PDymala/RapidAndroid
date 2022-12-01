@@ -1,7 +1,6 @@
 import ketai.camera.*;
 KetaiCamera cam;
 float gridSize = 20;
-PImage output;
 
 void setup() {
   orientation(LANDSCAPE);
@@ -10,7 +9,6 @@ void setup() {
   imageMode(CENTER);
   cam.setCameraID(0);
   cam.start();
-  output = createImage(1280, 720, RGB);
  
 }
 
